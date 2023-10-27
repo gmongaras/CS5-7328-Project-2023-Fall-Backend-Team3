@@ -86,7 +86,6 @@ export async function signUp(req: Request, res: Response) {
   
   // Convert number to integer
   const smuNo_int = parseInt(smuNo);
-
   try {
     // Check if username is already taken
     const existingUser = await prisma.user.findUnique({ where: { username } });
